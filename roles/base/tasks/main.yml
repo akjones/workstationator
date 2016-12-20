@@ -1,0 +1,20 @@
+- name: Package | Install lists packages
+  apt: pkg={{ item }} state=installed
+  become: true
+  with_items:
+    - bash-completion
+    - vim
+    - git
+    - git-core
+    - git-email
+    - git-extras
+    - zsh
+    - curl
+    - wget
+    - htop
+    - ack-grep
+    - terminator
+    - unzip
+    - tar
+    - gzip
+    - bzip2
