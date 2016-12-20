@@ -1,0 +1,50 @@
+- name: install oh-my-zsh
+  git: 
+     repo: https://github.com/robbyrussell/oh-my-zsh.git
+     dest: ~/.oh-my-zsh
+
+- name: install powerlevel9k theme for oh-my-zsh
+  git:
+    repo: https://github.com/bhilburn/powerlevel9k.git
+    dest: ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+- name: create font directory
+  file: 
+    path: ~/.fonts
+    state: absent
+
+- name: get powerline fonts
+  become: yes
+  get_url: 
+    url: https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+    dest: /usr/share/fonts/X11/misc/PowerlineSymbols.otf
+
+- name: setup fontconfig user dir
+  file:
+    path: ~/.config/fontconfig
+    state: directory
+
+- name: setup fontconfig user dir conf dir
+  file:
+    path: ~/.config/fontconfig/conf.d
+    state: directory
+
+- name: get powerline font config
+  get_url: 
+    url: https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+    dest: ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
+
+
+- name: update font cache
+  become: yes
+  shell: fc-cache -vf /usr/share/fonts/X11/misc
+
+- name: get the current user
+  local_action: command whoami
+  register: current_user
+
+- name: set zsh as default shell
+  become: yes
+  user:
+    name: "{{ current_user['stdout'] }}"
+    shell: /usr/bin/zsh
