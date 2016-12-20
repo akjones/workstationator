@@ -1,4 +1,4 @@
-- name: Package | Install lists packages
+- name: install base packages
   apt: pkg={{ item }} state=installed
   become: true
   with_items:
