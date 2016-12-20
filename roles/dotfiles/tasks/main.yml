@@ -1,0 +1,11 @@
+- git:
+    repo: git@github.com:akjones/dotfiles.git
+    dest: ~/src/dotfiles
+
+- name: link dotfiles
+  command: ~/src/dotfiles/install.sh
+
+- name: install vundle
+  git:
+    repo: https://github.com/VundleVim/Vundle.vim.git
+    dest: ~/.vim/bundle/Vundle.vim
