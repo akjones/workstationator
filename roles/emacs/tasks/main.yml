@@ -22,6 +22,7 @@
   git:
     repo: https://github.com/syl20bnr/spacemacs
     dest: ~/.emacs.d
+    update: no
 
 - name: get the current user
   local_action: command whoami

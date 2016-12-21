@@ -2,6 +2,7 @@
   git: 
      repo: https://github.com/robbyrussell/oh-my-zsh.git
      dest: ~/.oh-my-zsh
+     update: no
 
 - name: install powerlevel9k theme for oh-my-zsh
   git:
