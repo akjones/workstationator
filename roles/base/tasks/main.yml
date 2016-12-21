@@ -22,3 +22,8 @@
     - gcc
     - g++
 
+- name: remap keys
+  become: yes
+  copy:
+    src: keyboard
+    dest: /etc/default/keyboard
