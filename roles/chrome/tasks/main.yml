@@ -1,0 +1,6 @@
+- stat:
+    path: /usr/bin/google-chrome
+  register: chrome
+
+- include: install_chrome
+  when: chrome.stat.exists == False
