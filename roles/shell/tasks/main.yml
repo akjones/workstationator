@@ -9,32 +9,24 @@
     repo: https://github.com/bhilburn/powerlevel9k.git
     dest: ~/.oh-my-zsh/custom/themes/powerlevel9k
 
-- name: create font directory
-  file: 
-    path: ~/.fonts
-    state: absent
-
 - name: get powerline fonts
   become: yes
   get_url: 
     url: https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
     dest: /usr/share/fonts/X11/misc/PowerlineSymbols.otf
 
-- name: setup fontconfig user dir
+- name: setup fontconfig dirs
   file:
-    path: ~/.config/fontconfig
+    path: "{{ item }}"
     state: directory
-
-- name: setup fontconfig user dir conf dir
-  file:
-    path: ~/.config/fontconfig/conf.d
-    state: directory
+  with_items:
+    - ~/.config/fontconfig
+    - ~/.config/fontconfig/conf.d
 
 - name: get powerline font config
   get_url: 
     url: https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
     dest: ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
-
 
 - name: update font cache
   become: yes
