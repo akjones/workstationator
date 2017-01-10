@@ -3,7 +3,7 @@
     - base
     - shell
     - dotfiles
-    - emacs
+    - editors
     - virtualbox
     - chrome
     - spotify
