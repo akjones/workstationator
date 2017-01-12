@@ -24,23 +24,7 @@
     dest: ~/.emacs.d
     update: no
 
-- name: get the current user
-  local_action: command whoami
-  register: current_user
-
-- name: install emacs service
-  become: yes
-  template:
-    src: emacs.service.j2
-    dest: /etc/systemd/system/emacs.service
-
-- name: reload daemon
-  become: yes
-  command: systemctl daemon-reload
-
-- name: start emacs service
-  become: yes
-  service:
-    name: emacs.service
-    enabled: yes
-    state: started
+- name: start emacs on login
+  copy:
+    src: emacs.desktop
+    dest: ~/.config/autostart/emacs.desktop
