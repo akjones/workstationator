@@ -1,0 +1,19 @@
+- name: disable touchpad while typing
+  copy:
+    src: syndaemon.desktop
+    dest: ~/.config/autostart/syndaemon.desktop
+
+- name: enable slack on startup
+  copy:
+    src: slack.desktop
+    dest: ~/.config/autostart/slack.desktop
+
+- name: enable terminator on startup
+  copy:
+    src: terminator.desktop
+    dest: ~/.config/autostart/terminator.desktop
+
+- name: enable thunderbird on startup
+  copy:
+    src: thunderbird.desktop
+    dest: ~/.config/autostart/thunderbird.desktop
