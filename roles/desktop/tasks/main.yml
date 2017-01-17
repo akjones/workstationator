@@ -1,1 +1,9 @@
 - include: startup_apps.yml
+
+- stat:
+    path: /opt/zazu/zazu
+  register: zazu
+
+- include: zazu.yml
+  when: zazu.stat.exists == False
+
