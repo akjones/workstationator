@@ -1,0 +1,35 @@
+- name: add yarn repo key
+  become: yes
+  apt_key:
+    url: 'https://dl.yarnpkg.com/debian/pubkey.gpg'
+    state: present
+
+- name: add yarn repo
+  become: yes
+  apt_repository:
+    repo: 'deb https://dl.yarnpkg.com/debian/ stable main'
+    state: present
+
+- name: install yarn
+  become: yes
+  apt:
+    name: yarn
+    state: installed
+    update_cache: yes
+
+- stat:
+    path: ~/.nvm/nvm.sh
+  register: nvm
+
+- name: copy nvm install script
+  copy:
+    src: install_nvm.sh
+    dest: /tmp/install_nvm.sh
+    mode: 0755
+  when: nvm.stat.exists == False
+
+- name: run nvm installer
+  command: /tmp/install_nvm.sh
+  when: nvm.stat.exists == False
+
+   
