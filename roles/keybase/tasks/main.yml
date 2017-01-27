@@ -1,0 +1,12 @@
+- name: download package
+  get_url:
+    url: https://prerelease.keybase.io/keybase_amd64.deb
+    dest: /tmp/keybase.deb
+
+- name: install keybase
+  become: yes
+  apt:
+    deb: /tmp/keybase.deb
+
+- name: restart keybase
+  command: run_keybase
