@@ -1,1 +1,8 @@
+- name: install dependencies
+  become: yes
+  apt:
+    name: markdown
+    state: present
+    update_cache: yes
+
 - include: emacs.yml
