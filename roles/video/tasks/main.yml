@@ -10,3 +10,10 @@
     name: kdenlive
     state: installed
     update_cache: yes
+
+- name: install vlc
+  become: yes
+  apt:
+    name: vlc
+    state: installed
+    update_cache: yes
