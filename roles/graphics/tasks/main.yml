@@ -3,3 +3,9 @@
   apt:
     name: gimp
     state: installed
+
+- name: colour picker
+  apt:
+    name: gpick
+    state: installed
+  become: yes
