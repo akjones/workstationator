@@ -1,0 +1,6 @@
+- name: install audacity
+  become: yes
+  apt:
+    name: audacity
+    state: installed
+    update_cache: yes
