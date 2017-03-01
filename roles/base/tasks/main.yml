@@ -15,6 +15,7 @@
     - wget
     - htop
     - ack-grep
+    - silversearcher-ag
     - terminator
     - unzip
     - tar
