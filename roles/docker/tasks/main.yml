@@ -23,3 +23,16 @@
     src: docker-compose
     dest: /usr/local/bin/docker-compose
     mode: 0755
+
+- name: add docker group
+  become: yes
+  group:
+    name: docker
+    state: present
+
+- name: add me to docker group
+  become: yes
+  user:
+    name: akjones
+    groups: docker
+    append: yes
