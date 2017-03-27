@@ -9,3 +9,15 @@
 - name: update sysctl
   become: yes
   shell: sysctl -p /etc/sysctl.conf
+
+- name: add sound-switcher-indicator repo
+  become: yes
+  apt_repository:
+    repo: 'ppa:yktooo/ppa'
+    state: present
+
+- name: install sound-switcher-indicator
+  become: yes
+  apt:
+    name: indicator-sound-switcher
+    update_cache: yes
