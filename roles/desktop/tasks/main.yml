@@ -45,3 +45,9 @@
   apt:
     name: caffeine
     update_cache: yes
+
+- name: install load indicator
+  become: yes
+  apt:
+    name: indicator-multiload
+    update_cache: yes
