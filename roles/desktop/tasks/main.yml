@@ -21,3 +21,15 @@
   apt:
     name: indicator-sound-switcher
     update_cache: yes
+
+- name: add netspeed indicator repo
+  become: yes
+  apt_repository:
+    repo: 'ppa:fixnix/netspeed'
+    state: present
+
+- name: install netspeed indicator
+  become: yes
+  apt:
+    name: indicator-netspeed-unity
+    update_cache: yes
