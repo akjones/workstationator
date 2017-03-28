@@ -4,6 +4,12 @@
     name: gimp
     state: installed
 
+- name: install gphoto2
+  become: yes
+  apt:
+    name: gphoto2
+    state: installed
+
 - name: colour picker
   apt:
     name: gpick
