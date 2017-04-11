@@ -28,3 +28,4 @@
     - ruby
     - postgres
     - redis
+    - phantomjs
