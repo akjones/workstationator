@@ -1,5 +1,13 @@
-#!/bin/bash -e
+#!/bin/bash
 
-sudo apt install ansible -y
+set -eu
 
-ansible-playbook -i "localhost," -c local workstation.yml $@
+which ansible
+
+if [ ! $? -eq 0 ]; then
+    sudo add-apt-repository ppa:ansible/ansible
+    sudo apt-get update
+    sudo apt-get install -y ansible
+fi;
+
+ansible-playbook --ask-sudo-pass -i "localhost," -c local workstation.yml $@
