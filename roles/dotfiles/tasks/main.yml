@@ -1,6 +1,7 @@
 - git:
     repo: git@github.com:akjones/dotfiles.git
     dest: ~/src/dotfiles
+    accept_hostkey: yes
     update: no
 
 - name: link dotfiles

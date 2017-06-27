@@ -5,6 +5,7 @@
     state: present
 
 - name: install rvm
+  become: yes
   apt:
     name: rvm
     state: installed
