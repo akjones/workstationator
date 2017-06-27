@@ -1,0 +1,25 @@
+- name: copy install script
+  become: yes
+  copy:
+    src: install.sh
+    dest: /tmp/install.sh
+    mode: 0755
+
+- name: install build prerequisites
+  become: true
+  apt:
+    name: tmux
+    state: build-dep
+    update_cache: yes
+
+- name: install version 2.5
+  become: yes
+  command: /tmp/install.sh
+  args:
+    creates: /usr/local/bin/tmux
+
+- name: install tpm
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm
+    update: no
