@@ -4,7 +4,7 @@
 
 - name: download package
   get_url:
-    url: https://releases.hashicorp.com/terraform/0.8.8/terraform_0.8.8_linux_amd64.zip
+    url: https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
     dest: /tmp/terraform.zip
   when: terraform.stat.exists == False
 
