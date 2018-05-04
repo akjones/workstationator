@@ -30,9 +30,13 @@
     name: docker
     state: present
 
-- name: add me to docker group
+- name: get the current user
+  local_action: command whoami
+  register: current_user
+
+- name: add current user to docker group
   become: yes
   user:
-    name: akjones
+    name: "{{ current_user['stdout'] }}"
     groups: docker
     append: yes
