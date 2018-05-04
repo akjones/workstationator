@@ -4,12 +4,12 @@
 
 - name: download package
   get_url:
-    url: https://releases.hashicorp.com/vagrant/1.9.3/vagrant_1.9.3_x86_64.deb
-    dest: /tmp/vagrant_1.9.3_x86_64.deb
+    url: https://releases.hashicorp.com/vagrant/2.1.0/vagrant_2.1.0_x86_64.deb
+    dest: /tmp/vagrant_2.1.0_x86_64.deb
   when: vagrant.stat.exists == False
 
 - name: install
   become: yes
   apt:
-    deb: /tmp/vagrant_1.9.3_x86_64.deb
+    deb: /tmp/vagrant_2.1.0_x86_64.deb
   when: vagrant.stat.exists == False
