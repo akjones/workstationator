@@ -22,6 +22,7 @@
       - gcc
       - g++
       - gnome-tweak-tool
+      - signal-desktop
     state: present
   become: yes
 
