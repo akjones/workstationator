@@ -14,5 +14,5 @@
   become: yes
   apt:
     name: heroku
-    state: installed
+    state: present
     update_cache: yes

@@ -12,7 +12,7 @@
     state: build-dep
     update_cache: yes
 
-- name: install version 25.3
+- name: install version 26.1
   become: yes
   command: /tmp/install.sh
   args:

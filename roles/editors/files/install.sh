@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-emacs_version="25.3"
+emacs_version="26.1"
 if [ ! -e /tmp/emacs-${emacs_version}.tar.gz ]; then
   curl http://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-${emacs_version}.tar.gz > /tmp/emacs-${emacs_version}.tar.gz
 fi
