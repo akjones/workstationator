@@ -13,4 +13,4 @@ if [ ! $? -eq 0 ]; then
     sudo apt-get install -y ansible
 fi;
 
-ansible-playbook --ask-sudo-pass -i "localhost," -c local workstation.yml $@
+ansible-playbook -K -i "localhost," -c local workstation.yml $@
