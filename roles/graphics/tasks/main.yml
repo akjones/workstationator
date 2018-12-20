@@ -2,16 +2,16 @@
   become: yes
   apt:
     name: gimp
-    state: installed
+    state: present
 
 - name: install gphoto2
   become: yes
   apt:
     name: gphoto2
-    state: installed
+    state: present
 
 - name: colour picker
   apt:
     name: gpick
-    state: installed
+    state: present
   become: yes

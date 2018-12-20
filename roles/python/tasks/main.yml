@@ -1,13 +1,18 @@
 - name: base packages
   apt:
-    name: "{{ item }}"
-    state: installed
+    name:
+      - python
+      - python-pip
+    state: present
     update_cache: yes
   become: true
-  with_items:
-    - python
-    - python-pip
 
 - name: python virtualenv
   pip:
     name: virtualenv
+
+- name: pipenv
+  pip:
+    name: pipenv
+    extra_args: '--user'
+

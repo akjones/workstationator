@@ -2,5 +2,5 @@
   become: yes
   apt:
     name: audacity
-    state: installed
+    state: present
     update_cache: yes

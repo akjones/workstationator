@@ -14,7 +14,7 @@
   become: yes
   apt:
     name: docker-ce
-    state: installed
+    state: present
     update_cache: yes
 
 - name: install docker-compose

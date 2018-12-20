@@ -8,12 +8,12 @@
   become: yes
   apt:
     name: kdenlive
-    state: installed
+    state: present
     update_cache: yes
 
 - name: install vlc
   become: yes
   apt:
     name: vlc
-    state: installed
+    state: present
     update_cache: yes
