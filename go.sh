@@ -2,6 +2,9 @@
 
 set -eu
 
+sudo apt update
+sudo apt upgrade
+
 which ansible
 
 if [ ! $? -eq 0 ]; then
