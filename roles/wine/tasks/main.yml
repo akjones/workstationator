@@ -1,0 +1,27 @@
+- name: check i386 architecture available
+  command: dpkg --print-foreign-architectures
+  register: arch
+
+- name: ensure i386 architecture installed
+  become: yes
+  command: dpkg --add-architecture i386 
+  when: arch.stdout.find('i386') == -1
+
+- name: install winehq key
+  become: yes
+  apt_key:
+    url: https://dl.winehq.org/wine-builds/winehq.key
+    state: present
+
+- name: add winehq repo
+  become: yes
+  apt_repository:
+    repo: 'deb http://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+    state: present
+
+- name: install wine stable
+  become: yes
+  apt:
+    name: winehq-stable
+    state: present
+    update_cache: yes
