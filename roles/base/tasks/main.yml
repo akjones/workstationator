@@ -23,6 +23,7 @@
       - g++
       - gnome-tweak-tool
       - signal-desktop
+      - xsel
     state: present
   become: yes
 
