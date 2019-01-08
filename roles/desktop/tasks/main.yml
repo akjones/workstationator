@@ -14,16 +14,18 @@
   become: yes
   apt_repository:
     repo: 'ppa:yktooo/ppa'
-    state: present
+    state: absent
 
 - name: install sound-switcher-indicator
   become: yes
   apt:
     name: indicator-sound-switcher
+    state: absent
     update_cache: yes
 
 - name: install load indicator
   become: yes
   apt:
     name: indicator-multiload
+    state: absent
     update_cache: yes
