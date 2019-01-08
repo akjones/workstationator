@@ -10,22 +10,3 @@
   become: yes
   shell: sysctl -p /etc/sysctl.conf
 
-- name: add sound-switcher-indicator repo
-  become: yes
-  apt_repository:
-    repo: 'ppa:yktooo/ppa'
-    state: absent
-
-- name: install sound-switcher-indicator
-  become: yes
-  apt:
-    name: indicator-sound-switcher
-    state: absent
-    update_cache: yes
-
-- name: install load indicator
-  become: yes
-  apt:
-    name: indicator-multiload
-    state: absent
-    update_cache: yes
