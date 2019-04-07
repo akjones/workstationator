@@ -25,3 +25,4 @@
     - resilio-sync
     - tmux
     - wine
+    - { role: gantsign.golang, golang_path: '$HOME/src/go' }
