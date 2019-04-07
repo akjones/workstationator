@@ -25,3 +25,7 @@
     name: winehq-stable
     state: present
     update_cache: yes
+  register: apt_res
+  retries: 5
+  until: apt_res is success
+

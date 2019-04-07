@@ -4,7 +4,6 @@
       - python
       - python-pip
     state: present
-    update_cache: yes
   become: true
 
 - name: python virtualenv

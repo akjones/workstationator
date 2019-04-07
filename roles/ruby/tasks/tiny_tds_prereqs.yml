@@ -1,5 +1,4 @@
 - name: install prerequisites for tiny_tds gem
   apt:
     name: freetds-dev
-    update_cache: yes
   become: yes

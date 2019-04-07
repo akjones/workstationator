@@ -10,7 +10,6 @@
   apt:
     name: tmux
     state: build-dep
-    update_cache: yes
 
 - name: install version 2.7
   become: yes

@@ -1,5 +1,4 @@
 - name: install redis
   apt:
     name: redis-server
-    update_cache: yes
   become: yes

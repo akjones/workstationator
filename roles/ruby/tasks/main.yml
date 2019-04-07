@@ -9,4 +9,3 @@
   apt:
     name: rvm
     state: present
-    update_cache: yes

@@ -3,4 +3,3 @@
   apt:
     name: audacity
     state: present
-    update_cache: yes

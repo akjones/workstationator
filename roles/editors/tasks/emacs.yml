@@ -11,6 +11,9 @@
     name: emacs24
     state: build-dep
     update_cache: yes
+  register: apt_res
+  retries: 5
+  until: apt_res is success
 
 - name: install version 26.1
   become: yes
