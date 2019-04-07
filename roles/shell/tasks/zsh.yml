@@ -15,6 +15,11 @@
     repo: https://github.com/bhilburn/powerlevel9k.git
     dest: ~/.oh-my-zsh/custom/themes/powerlevel9k
 
+- name: install zsh-syntax-highlighting
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
 - name: get powerline fonts
   become: yes
   get_url: 
