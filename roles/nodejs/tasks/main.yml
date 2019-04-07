@@ -8,13 +8,13 @@
   become: yes
   apt_repository:
     repo: 'deb https://dl.yarnpkg.com/debian/ stable main'
-    state: present
+    state: absent
 
 - name: install yarn
   become: yes
   apt:
     name: yarn
-    state: present
+    state: absent
     update_cache: yes
   register: apt_res
   retries: 5
