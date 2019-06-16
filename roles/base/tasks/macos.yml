@@ -1,0 +1,19 @@
+- homebrew:
+    name:
+      - ack
+      - vim
+      - git
+      - curl
+      - jq
+      - htop
+      - openssl
+      - ag
+    state: present
+
+- homebrew_cask:
+    name:
+      - google-chrome 
+      - hammerspoon
+      - homebrew/cask-versions/firefox-developer-edition
+      - signal
+    state: installed 

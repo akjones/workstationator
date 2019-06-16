@@ -1,0 +1,26 @@
+- hosts: all
+  roles:
+    - base
+    - shell
+    - dotfiles
+    - editors
+    # - virtualbox
+    # - vagrant
+    # - chrome
+    # - slack
+    # - graphics
+    # - openjdk
+    # - leiningen
+    # - music
+    # - nodejs
+    # - keybase
+    # - python
+    # - video
+    # - herokucli
+    # - audio
+    # - docker
+    # - terraform
+    # - aws
+    # - resilio-sync
+    # - tmux
+    # - { role: gantsign.golang, golang_path: '$HOME/src/go' }

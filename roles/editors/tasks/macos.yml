@@ -1,0 +1,9 @@
+- homebrew_cask:
+    name:
+      - emacs
+    state: installed 
+
+- homebrew:
+    name:
+      - markdown
+    state: installed 

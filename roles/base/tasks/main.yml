@@ -1,34 +1,8 @@
 - name: install base packages
-  apt:
-    name:
-      - bash-completion
-      - vim
-      - git
-      - git-core
-      - git-email
-      - git-extras
-      - curl
-      - jq
-      - wget
-      - htop
-      - ack-grep
-      - silversearcher-ag
-      - terminator
-      - unzip
-      - tar
-      - gzip
-      - bzip2
-      - build-essential
-      - gcc
-      - g++
-      - gnome-tweak-tool
-      - signal-desktop
-      - xsel
-    state: present
-  become: yes
+  include: linux.yml
+  when: ansible_os_family == "Debian"
 
-- name: remap keys
-  become: yes
-  copy:
-    src: keyboard
-    dest: /etc/default/keyboard
+
+- name: install base packages
+  include: macos.yml
+  when: ansible_os_family == "Darwin"

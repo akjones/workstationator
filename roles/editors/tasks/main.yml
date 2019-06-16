@@ -1,11 +1,6 @@
-- name: install dependencies
-  become: yes
-  apt:
-    name: markdown
-    state: present
-    update_cache: yes
-  register: apt_res
-  retries: 5
-  until: apt_res is success
+- include: linux.yml
+  when: ansible_os_family == "Debian"
 
-- include: emacs.yml
+
+- include: macos.yml
+  when: ansible_os_family == "Darwin"

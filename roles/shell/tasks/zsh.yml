@@ -3,6 +3,13 @@
   apt:
     name: zsh
     state: present
+  when: ansible_os_family == "Debian"
+
+- name: install fontconfig
+  homebrew:
+    name: fontconfig
+    state: installed
+  when: ansible_os_family == "Darwin"
 
 - name: install oh-my-zsh
   git: 
@@ -25,6 +32,13 @@
   get_url: 
     url: https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
     dest: /usr/share/fonts/X11/misc/PowerlineSymbols.otf
+  when: ansible_os_family == "Debian"
+
+- name: get powerline fonts
+  get_url: 
+    url: https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+    dest: ~/Library/Fonts/PowerlineSymbols.otf
+  when: ansible_os_family == "Darwin"
 
 - name: setup fontconfig dirs
   file:
@@ -42,6 +56,7 @@
 - name: update font cache
   become: yes
   shell: fc-cache -vf /usr/share/fonts/X11/misc
+  when: ansible_os_family == "Debian"
 
 - name: get the current user
   local_action: command whoami
