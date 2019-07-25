@@ -1,9 +1,8 @@
 - hosts: all
   roles:
-    - base
     - shell
     - dotfiles
-    - editors
+    # - editors
     # - virtualbox
     # - vagrant
     # - chrome
