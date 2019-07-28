@@ -34,6 +34,7 @@ brew "tmux"
 brew "vim"
 brew "osx-cross/avr/avr-gcc@7", link: true
 brew "px4/px4/gcc-arm-none-eabi"
+brew "kubernetes-cli"
 
 cask "alacritty"
 cask "docker"
