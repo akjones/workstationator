@@ -37,7 +37,6 @@ brew "osx-cross/avr/avr-gcc@7", link: true
 brew "ponysay"
 brew "pulumi"
 brew "px4/px4/gcc-arm-none-eabi"
-brew "python"
 brew "readline"
 brew "terraform"
 brew "the_silver_searcher"
