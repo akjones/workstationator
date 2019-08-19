@@ -36,6 +36,7 @@ brew "openssl"
 brew "osx-cross/avr/avr-gcc@7", link: true
 brew "ponysay"
 brew "pulumi"
+brew "pipenv"
 brew "px4/px4/gcc-arm-none-eabi"
 brew "readline"
 brew "terraform"
