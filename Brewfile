@@ -45,6 +45,7 @@ brew "tmux"
 brew "unixodbc"
 brew "unzip"
 brew "vim"
+brew "adr-tools"
 
 cask "alacritty"
 cask "docker"
