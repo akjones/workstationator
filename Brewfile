@@ -46,6 +46,7 @@ brew "unixodbc"
 brew "unzip"
 brew "vim"
 brew "adr-tools"
+brew "autojump"
 
 cask "alacritty"
 cask "docker"
