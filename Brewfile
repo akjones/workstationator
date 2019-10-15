@@ -67,3 +67,7 @@ cask "gimp"
 cask "skype"
 cask "spotify"
 cask "intellij-idea-ce"
+
+#clj tools
+tap "borkdude/brew"
+brew "clj-kondo"
