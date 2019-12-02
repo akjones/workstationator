@@ -1,9 +1,5 @@
-- homebrew_cask:
-    name:
-      - emacs
-    state: installed 
-
-- homebrew:
-    name:
-      - markdown
-    state: installed 
+- name: install spacemacs
+  git:
+    repo: https://github.com/syl20bnr/spacemacs
+    dest: ~/.emacs.d
+    update: no
