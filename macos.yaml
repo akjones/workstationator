@@ -2,7 +2,7 @@
   roles:
     - shell
     - dotfiles
-    # - editors
+    - editors
     # - virtualbox
     # - vagrant
     # - chrome
