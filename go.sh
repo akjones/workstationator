@@ -5,6 +5,8 @@ set -u
 version="${1:-linux}"
 
 if [[ `uname` == 'Darwin' ]]; then
+    brew bundle install --file Brewfile
+
     which ansible
 
     if [ ! $? -eq 0 ]; then
