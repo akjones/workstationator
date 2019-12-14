@@ -66,6 +66,7 @@ cask "gimp"
 cask "skype"
 cask "spotify"
 cask "intellij-idea-ce"
+cask "bitwarden"
 
 #clj tools
 tap "borkdude/brew"
