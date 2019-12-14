@@ -47,6 +47,7 @@ brew "unzip"
 brew "vim"
 brew "adr-tools"
 brew "autojump"
+brew "zsh"
 
 cask "alacritty"
 cask "docker"

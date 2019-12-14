@@ -57,3 +57,11 @@
   user:
     name: "{{ current_user['stdout'] }}"
     shell: /usr/bin/zsh
+  when: ansible_os_family == "Debian"
+
+- name: set zsh as default shell
+  become: yes
+  user:
+    name: "{{ current_user['stdout'] }}"
+    shell: /usr/bin/zsh
+  when: ansible_os_family == "Darwin"
