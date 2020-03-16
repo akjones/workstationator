@@ -68,6 +68,8 @@ cask "skype"
 cask "spotify"
 cask "intellij-idea-ce"
 cask "bitwarden"
+cask "spideroakone"
+cask "expressvpn"
 
 mas "Divvy"
 
