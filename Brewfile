@@ -7,6 +7,7 @@ tap "homebrew/services"
 tap "osx-cross/avr"
 tap "px4/px4"
 
+brew "mas"
 brew "ack"
 brew "ansible"
 brew "asdf"
@@ -67,6 +68,8 @@ cask "skype"
 cask "spotify"
 cask "intellij-idea-ce"
 cask "bitwarden"
+
+mas "Divvy"
 
 #clj tools
 tap "borkdude/brew"
