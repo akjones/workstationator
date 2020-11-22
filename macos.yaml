@@ -3,6 +3,7 @@
     - shell
     - dotfiles
     - editors
+    - asdf
     # - virtualbox
     # - vagrant
     # - chrome
