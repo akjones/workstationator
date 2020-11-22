@@ -1,5 +1,8 @@
-- name: install spacemacs
+- name: install doom emacs
   git:
-    repo: https://github.com/syl20bnr/spacemacs
+    repo: https://github.com/hlissner/doom-emacs
     dest: ~/.emacs.d
     update: no
+
+- name: doom install
+  command: ~/.emacs.d/bin/doom install
