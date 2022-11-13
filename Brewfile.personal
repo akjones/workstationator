@@ -1,0 +1,21 @@
+tap "osx-cross/avr"
+
+brew "libusb"
+brew "osx-cross/avr/avr-gcc@7", link: true
+brew "px4/px4/gcc-arm-none-eabi"
+
+cask "dropbox"
+cask "signal"
+cask "reaper"
+cask "vcv-rack"
+cask "skype"
+cask "expressvpn"
+cask "steam"
+cask "blender"
+cask "spideroakone"
+
+#clj tools
+tap "borkdude/brew"
+brew "clj-kondo"
+
+mas Logic Pro, id: 634148309
