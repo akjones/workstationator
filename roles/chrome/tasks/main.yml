@@ -2,5 +2,5 @@
     path: /usr/bin/google-chrome
   register: chrome
 
-- include: install_chrome.yml
+- include_tasks: install_chrome.yml
   when: chrome.stat.exists == False

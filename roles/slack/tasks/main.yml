@@ -2,5 +2,5 @@
     path: /usr/bin/slack
   register: slack
 
-- include: install_slack.yml
+- include_tasks: install_slack.yml
   when: slack.stat.exists == False
