@@ -11,10 +11,10 @@
      dest: ~/.oh-my-zsh
      update: no
 
-- name: install powerlevel9k theme for oh-my-zsh
+- name: install powerlevel10k theme for oh-my-zsh
   git:
-    repo: https://github.com/bhilburn/powerlevel9k.git
-    dest: ~/.oh-my-zsh/custom/themes/powerlevel9k
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: ~/.oh-my-zsh/custom/themes/powerlevel10k
 
 - name: install zsh-syntax-highlighting
   git:
