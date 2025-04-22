@@ -1,6 +1,7 @@
 - name: install base packages
   apt:
     name:
+      - autojump
       - bash-completion
       - vim
       - git
@@ -21,8 +22,7 @@
       - build-essential
       - gcc
       - g++
-      - gnome-tweak-tool
-      - signal-desktop
+      - gnome-tweaks
       - xsel
     state: present
   become: yes
@@ -32,3 +32,32 @@
   copy:
     src: keyboard
     dest: /etc/default/keyboard
+
+- name: get nerd fonts
+  ansible.builtin.git:
+    repo: https://github.com/ryanoasis/nerd-fonts.git
+    clone: yes
+    depth: 1
+    dest: ~/src/nerd-fonts
+    version: v3.3.0
+
+- name: add brave browser key
+  get_url:
+    url: https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    checksum: "sha256:9c0e57c7299df49aaf28e88695b97d9bfe049f0ba44fad3d06fdba849db50cb0"
+    dest: /usr/share/keyrings/brave-browser-archive-keyring.gpg
+    owner: root
+  become: true
+
+- name: add brave browser repo
+  ansible.builtin.apt_repository:
+    repo: deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main
+    update_cache: true
+    state: present
+  become: true
+
+- name: install brave browser
+  ansible.builtin.apt:
+    name: brave-browser
+    state: present
+  become: true

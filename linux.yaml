@@ -4,25 +4,25 @@
     - shell
     - dotfiles
     - editors
-    - desktop
-    - virtualbox
-    - vagrant
+#    - desktop
+#    - virtualbox
+#    - vagrant
     - chrome
     - slack
-    - graphics
-    - openjdk
-    - leiningen
-    - music
-    - nodejs
-    - keybase
-    - python
-    - video
-    - herokucli
-    - audio
-    - docker
-    - terraform
-    - aws
-    - resilio-sync
+#    - graphics
+#    - openjdk
+#    - leiningen
+#    - music
+#    - nodejs
+#    - keybase
+#    - python
+#    - video
+#    - herokucli
+#    - audio
+#    - docker
+#    - terraform
+#    - aws
+#    - resilio-sync
     - tmux
-    - wine
-    - { role: gantsign.golang, golang_path: '$HOME/src/go' }
+#    - wine
+#    - { role: gantsign.golang, golang_path: '$HOME/src/go' }
