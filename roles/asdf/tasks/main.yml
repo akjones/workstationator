@@ -1,7 +1,7 @@
 - name: install asdf
-  git:
-    repo: https://github.com/asdf-vm/asdf.git
-    dest: ~/.asdf
-    update: no
-    version: v0.8.0
-    depth: 1
+  ansible.builtin.unarchive:
+    src: "https://github.com/asdf-vm/asdf/releases/download/{{ asdf_version }}/asdf-{{ asdf_version }}-linux-amd64.tar.gz"
+    dest: /usr/local/bin
+    remote_src: true
+    mode: '755'
+  become: true
