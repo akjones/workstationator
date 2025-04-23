@@ -25,10 +25,10 @@
       - gnome-tweaks
       - xsel
     state: present
-  become: yes
+  become: true
 
 - name: remap keys
-  become: yes
+  become: true
   copy:
     src: keyboard
     dest: /etc/default/keyboard
@@ -60,4 +60,39 @@
   ansible.builtin.apt:
     name: brave-browser
     state: present
+  become: true
+
+- name: add open-razer repo
+  ansible.builtin.apt_repository:
+    repo: 'ppa:openrazer/stable'
+    update_cache: true
+  become: true
+
+- name: install open-razer meta
+  ansible.builtin.apt:
+    name: openrazer-meta
+    state: present
+  become: true
+
+- name: add polychromatic repo
+  ansible.builtin.apt_repository:
+    repo: 'ppa:polychromatic/stable'
+    update_cache: true
+  become: true
+
+- name: install polychromatic
+  ansible.builtin.apt:
+    name: polychromatic
+    state: present
+  become: true
+
+- name: ensure openrazer kernel mod is loaded
+  ansible.builtin.command: "sudo modprobe razermouse"
+
+- name: user in plugdev group
+  ansible.builtin.user:
+    name: akjones
+    append: true
+    groups:
+      - plugdev
   become: true
