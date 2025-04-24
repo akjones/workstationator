@@ -63,5 +63,5 @@
   become: yes
   user:
     name: "{{ current_user['stdout'] }}"
-    shell: /opt/homebrew/bin/tmux
+    shell: /opt/homebrew/bin/zsh
   when: ansible_os_family == "Darwin"
