@@ -43,7 +43,7 @@ brew "shellcheck"
 
 
 cask "alacritty"
-cask "firefox-developer-edition"
+cask "firefox@developer-edition"
 cask "font-hack-nerd-font"
 cask "font-open-sans"
 cask "spotify"
