@@ -40,19 +40,6 @@
     dest: ~/src/nerd-fonts
     version: v3.3.0
 
-- name: remove brave browser repo
-  ansible.builtin.apt_repository:
-    repo: deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main
-    update_cache: true
-    state: absent
-  become: true
-
-- name: uninstall brave browser
-  ansible.builtin.apt:
-    name: brave-browser
-    state: absent
-  become: true
-
 - name: add open-razer repo
   ansible.builtin.apt_repository:
     repo: 'ppa:openrazer/stable'
