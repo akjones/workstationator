@@ -1,7 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/services"
 tap "px4/px4"
 tap "d12frosted/emacs-plus"
 
