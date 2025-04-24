@@ -11,7 +11,7 @@
     name: tmux
     state: build-dep
 
-- name: install version 2.7
+- name: install tmux
   become: yes
   command: /tmp/install.sh
   args:

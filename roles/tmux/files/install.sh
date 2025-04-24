@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-version=2.5
+version=3.5a
 package=tmux-${version}
 
 if [ ! -e /tmp/${package}.tar.gz ]; then
