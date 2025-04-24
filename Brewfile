@@ -57,4 +57,4 @@ cask "rectangle"
 cask "keymapp"
 cask "elgato-stream-deck"
 
-mas Fantastical, id: 975937182
+mas "Fantastical", id: 975937182
