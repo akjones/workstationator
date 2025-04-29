@@ -1,4 +1,3 @@
-tap "px4/px4"
 tap "d12frosted/emacs-plus"
 
 brew "mas"
