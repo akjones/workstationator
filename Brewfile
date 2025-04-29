@@ -39,7 +39,7 @@ brew "editorconfig"
 brew "isort"
 brew "shfmt"
 brew "shellcheck"
-
+brew "neovim"
 
 cask "alacritty"
 cask "firefox@developer-edition"
