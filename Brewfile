@@ -51,5 +51,6 @@ cask "postman"
 cask "rectangle"
 cask "keymapp"
 cask "elgato-stream-deck"
+cask "jetbrains-toolbox"
 
 mas "Fantastical", id: 975937182
