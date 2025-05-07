@@ -1,4 +1,5 @@
 brew "libusb"
+brew "pipx"
 
 cask "dropbox"
 cask "vcv-rack"
