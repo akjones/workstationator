@@ -7,6 +7,7 @@ cask "vcv-rack"
 cask "steam"
 cask "blender"
 cask "superwhisper"
+cask "vlc"
 
 #clj tools
 tap "borkdude/brew"
