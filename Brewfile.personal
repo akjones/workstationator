@@ -17,3 +17,4 @@ brew "babashka"
 brew "babashka/brew/neil"
 
 mas "Logic Pro", id: 634148309
+mas "Jot by espresso", id: 6461690583
