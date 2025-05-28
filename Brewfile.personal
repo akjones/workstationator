@@ -1,5 +1,6 @@
 brew "libusb"
 brew "pipx"
+brew "aws-sam-cli"
 
 cask "dropbox"
 cask "vcv-rack"
