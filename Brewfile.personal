@@ -16,5 +16,13 @@ brew "clj-kondo"
 brew "babashka"
 brew "babashka/brew/neil"
 
+cask "firefox@developer-edition"
+cask "keymapp"
+cask "elgato-stream-deck"
+cask "jetbrains-toolbox"
+cask "obsidian"
+
+mas "Fantastical", id: 975937182
+
 mas "Logic Pro", id: 634148309
 mas "Jot by espresso", id: 6461690583
