@@ -9,6 +9,7 @@ cask "blender"
 cask "superwhisper"
 cask "vlc"
 cask "ollama"
+cask "godot"
 
 #clj tools
 tap "borkdude/brew"
