@@ -14,6 +14,7 @@ cask "nordvpn"
 cask "gather"
 cask "obs"
 cask "block-goose"
+brew "block-goose-cli"
 
 #clj tools
 tap "borkdude/brew"
