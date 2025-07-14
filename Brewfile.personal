@@ -10,6 +10,7 @@ cask "superwhisper"
 cask "vlc"
 cask "ollama-app"
 cask "godot"
+cask "nordvpn"
 
 #clj tools
 tap "borkdude/brew"
