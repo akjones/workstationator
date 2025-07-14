@@ -12,6 +12,7 @@ cask "ollama-app"
 cask "godot"
 cask "nordvpn"
 cask "gather"
+cask "obs"
 
 #clj tools
 tap "borkdude/brew"
