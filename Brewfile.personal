@@ -8,7 +8,7 @@ cask "steam"
 cask "blender"
 cask "superwhisper"
 cask "vlc"
-cask "ollama"
+cask "ollama-app"
 cask "godot"
 
 #clj tools
