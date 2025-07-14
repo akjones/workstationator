@@ -13,6 +13,7 @@ cask "godot"
 cask "nordvpn"
 cask "gather"
 cask "obs"
+cask "block-goose"
 
 #clj tools
 tap "borkdude/brew"
