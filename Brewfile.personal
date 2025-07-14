@@ -15,6 +15,7 @@ cask "gather"
 cask "obs"
 cask "block-goose"
 brew "block-goose-cli"
+cask "discord"
 
 #clj tools
 tap "borkdude/brew"
