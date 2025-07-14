@@ -11,6 +11,7 @@ cask "vlc"
 cask "ollama-app"
 cask "godot"
 cask "nordvpn"
+cask "gather"
 
 #clj tools
 tap "borkdude/brew"
