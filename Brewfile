@@ -39,6 +39,8 @@ brew "shfmt"
 brew "shellcheck"
 brew "neovim"
 brew "watch"
+brew "docker"
+brew "docker-compose"
 
 cask "ghostty@tip"
 cask "font-hack-nerd-font"

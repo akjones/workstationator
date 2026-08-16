@@ -11,6 +11,7 @@ cask "godot"
 cask "nordvpn"
 cask "obs"
 cask "discord"
+cask "1password-cli"
 
 #clj tools
 tap "borkdude/brew"
