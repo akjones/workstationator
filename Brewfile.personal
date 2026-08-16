@@ -1,20 +1,15 @@
 brew "libusb"
 brew "pipx"
-brew "aws-sam-cli"
 
 cask "dropbox"
 cask "vcv-rack"
 cask "steam"
 cask "blender"
-cask "superwhisper"
 cask "vlc"
 cask "ollama-app"
 cask "godot"
 cask "nordvpn"
-cask "gather"
 cask "obs"
-cask "block-goose"
-brew "block-goose-cli"
 cask "discord"
 
 #clj tools
